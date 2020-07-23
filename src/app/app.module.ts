@@ -11,7 +11,9 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore'; // firestore
 import { AngularFireStorageModule } from '@angular/fire/storage'; // storage
-import { AngularFireAuthModule } from '@angular/fire/auth'; // auth
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { BackGroundComponent } from './back-ground/back-ground.component';
+import { LoginFormComponent } from './login-form/login-form.component'; // auth
 
 //firebase credentials
 const firebaseConfig = {
@@ -26,7 +28,7 @@ const firebaseConfig = {
 };
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, BackGroundComponent, LoginFormComponent],
   imports: [
     //Angular Modules
     BrowserModule,
