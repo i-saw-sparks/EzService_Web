@@ -8,24 +8,16 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
 // firebase libs
-import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore'; // firestore
-import { AngularFireStorageModule } from '@angular/fire/storage'; // storage
-import { AngularFireAuthModule } from '@angular/fire/auth';
-import { BackGroundComponent } from './back-ground/back-ground.component';
-import { LoginFormComponent } from './login-form/login-form.component'; // auth
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireStorageModule } from 'angularfire2/storage';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
-//firebase credentials
-const firebaseConfig = {
-  apiKey: 'AIzaSyD13uHBnqcFwbpC-SD6CO_yNruqTI0nXzg',
-  authDomain: 'servicios-4df28.firebaseapp.com',
-  databaseURL: 'https://servicios-4df28.firebaseio.com',
-  projectId: 'servicios-4df28',
-  storageBucket: 'servicios-4df28.appspot.com',
-  messagingSenderId: '305426721063',
-  appId: '1:305426721063:web:336620744c6056f03b6102',
-  measurementId: 'G-SB1YWT9R90',
-};
+import { BackGroundComponent } from './back-ground/back-ground.component';
+import { LoginFormComponent } from './login-form/login-form.component';
+
+//services
+import { AuthService } from './auth.service';
 
 @NgModule({
   declarations: [AppComponent, BackGroundComponent, LoginFormComponent],
@@ -36,17 +28,18 @@ const firebaseConfig = {
     BrowserAnimationsModule,
 
     //Initialize Firebase modules
-    AngularFireModule.initializeApp(firebaseConfig),
-    AngularFirestoreModule, // firestore
-    AngularFireAuthModule, // auth
-    AngularFireStorageModule, // storage
+    AngularFireModule,
+    AngularFireStorageModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
 
     //PWA Modules
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
     }),
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
