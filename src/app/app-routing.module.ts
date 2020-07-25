@@ -1,8 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { Page404Component } from 'src/app/components/page404/page404.component';
+import { LoginComponent } from './components/login/login.component';
 
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path: 'login', component: LoginComponent},
+  {path: '', redirectTo: '/login', pathMatch: 'full'},
+  {path: '**', component: Page404Component}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
