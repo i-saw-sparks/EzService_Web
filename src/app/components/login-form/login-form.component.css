@@ -2,9 +2,9 @@
 @charset "UTF-8";
 
 #icon{
-  position: fixed;
+  position: absolute;
   display: inline-block;
-  top: 20px;
+  top: -70px;
   margin-left: -64px;
 
 }
