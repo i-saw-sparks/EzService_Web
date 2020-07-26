@@ -7,6 +7,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
+//Angular Material
+import { MatFormFieldModule, MatFormField} from '@angular/material/form-field';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule} from '@angular/material/icon'
+import { MatButtonModule, MatButton } from '@angular/material/button'
 // firebase libs
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
@@ -36,6 +42,14 @@ import { LoginComponent } from './components/login/login.component';
     AngularFireDatabaseModule,
     AngularFireAuthModule,
 
+    //Angular Material
+    MatFormFieldModule,
+    FormsModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatIconModule,
+    MatButtonModule,
+
     //PWA Modules
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
@@ -43,5 +57,13 @@ import { LoginComponent } from './components/login/login.component';
   ],
   providers: [AuthService],
   bootstrap: [AppComponent],
+  exports:[
+    MatFormField,
+    FormsModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatIconModule,
+    MatButtonModule
+  ]
 })
 export class AppModule {}

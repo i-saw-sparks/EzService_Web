@@ -1,10 +1,18 @@
 <div class="form">
    <img src="/assets/icons/icon-128x128.png" alt="image" id="icon">
     <form class="login-form">
-        <input type="text" placeholder="Username"/>
-        <input type="password" placeholder="Password"/>
-        <input type="submit" value="login" id="loginBut">
+        <mat-form-field appearance="outline">
+            <mat-label>Username</mat-label>
+            <input matInput>
+            <mat-icon matSuffix>face</mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Username</mat-label>
+            <input matInput type="password">
+            <mat-icon matSuffix>vpn_key</mat-icon>
+        </mat-form-field>
     </form>
     <p>
     </p>
+    <button mat-raised-button color="primary">Login</button>
 </div>
