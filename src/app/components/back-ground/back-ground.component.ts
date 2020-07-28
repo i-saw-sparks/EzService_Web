@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BackGroundComponent implements OnInit {
 
-  constructor() { }
+  backClass:string;
+
+  constructor() { 
+    this.backClass = 'loginBackground';
+  }
 
   ngOnInit(): void {
   }

@@ -1,4 +1,4 @@
-#background{
+.loginBackground{
     position: fixed;
     top: 0;
     left: 0;
@@ -9,6 +9,7 @@
     background: linear-gradient(-25deg, #ffeb3b, #ffff72, #63a4ff, #1976d2);
     background-size: 400% 400%;
     animation: gradient 12s ease infinite;
+    z-index: -1;
 }
 
 @keyframes gradient {

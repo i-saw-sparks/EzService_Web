@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule} from '@angular/material/icon'
 import { MatButtonModule, MatButton } from '@angular/material/button'
+import { MatToolbarModule } from '@angular/material/toolbar'
 // firebase libs
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
@@ -25,10 +26,12 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 //services
 import { AuthService } from './auth.service';
 import { Page404Component } from './components/page404/page404.component';
-import { LoginComponent } from './components/login/login.component';
+import { LoginComponent } from './components/login-view/login.component';
+import { MainViewComponent } from './components/main-view/main-view.component';
+import { ToolBarComponent } from './components/tool-bar/tool-bar.component';
 
 @NgModule({
-  declarations: [AppComponent, BackGroundComponent, LoginFormComponent, Page404Component, LoginComponent],
+  declarations: [AppComponent, BackGroundComponent, LoginFormComponent, Page404Component, LoginComponent, MainViewComponent, ToolBarComponent],
   imports: [
     //Angular Modules
     BrowserModule,
@@ -49,6 +52,7 @@ import { LoginComponent } from './components/login/login.component';
     ReactiveFormsModule,
     MatIconModule,
     MatButtonModule,
+    MatToolbarModule,
 
     //PWA Modules
     ServiceWorkerModule.register('ngsw-worker.js', {
@@ -63,7 +67,8 @@ import { LoginComponent } from './components/login/login.component';
     MatInputModule,
     ReactiveFormsModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatToolbarModule
   ]
 })
 export class AppModule {}
