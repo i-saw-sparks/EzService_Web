@@ -20,18 +20,20 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
-import { BackGroundComponent } from './components/back-ground/back-ground.component';
-import { LoginFormComponent } from './components/login-form/login-form.component';
-
 //services
 import { AuthService } from './auth.service';
+
+//Components
 import { Page404Component } from './components/page404/page404.component';
 import { LoginComponent } from './components/login-view/login.component';
 import { MainViewComponent } from './components/main-view/main-view.component';
 import { ToolBarComponent } from './components/tool-bar/tool-bar.component';
+import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
+import { BackGroundComponent } from './components/back-ground/back-ground.component';
+import { LoginFormComponent } from './components/login-form/login-form.component';
 
 @NgModule({
-  declarations: [AppComponent, BackGroundComponent, LoginFormComponent, Page404Component, LoginComponent, MainViewComponent, ToolBarComponent],
+  declarations: [AppComponent, BackGroundComponent, LoginFormComponent, Page404Component, LoginComponent, MainViewComponent, ToolBarComponent, AdminPanelComponent],
   imports: [
     //Angular Modules
     BrowserModule,

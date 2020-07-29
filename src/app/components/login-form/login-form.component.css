@@ -1,12 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
-@charset "UTF-8";
 
 #icon{
   position: absolute;
   display: inline-block;
   top: -70px;
   margin-left: -64px;
-
 }
 
 .form {
