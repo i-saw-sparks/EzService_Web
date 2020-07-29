@@ -1,19 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-back-ground',
   templateUrl: './back-ground.component.html',
   styleUrls: ['./back-ground.component.css']
 })
-export class BackGroundComponent implements OnInit {
-
-  backClass:string;
+export class BackGroundComponent {
+ @Input() bgStyle:string;
 
   constructor() { 
-    this.backClass = 'loginBackground';
+    
   }
 
-  ngOnInit(): void {
-  }
 
 }

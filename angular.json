@@ -126,5 +126,8 @@
       }
     }
   },
-  "defaultProject": "EZservicesWeb"
+  "defaultProject": "EZservicesWeb",
+  "cli": {
+    "analytics": false
+  }
 }

@@ -12,6 +12,46 @@
     z-index: -1;
 }
 
+.panelBackground{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+    background: #63a4ff;
+    background: radial-gradient(circle, white, #ffeb3b);
+    background-size: 100% 100%;
+    animation: zoom 5s ease infinite;
+    z-index: -1;
+}
+
+.default{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+    background: #63a4ff;
+    background-size: 400% 400%;
+    z-index: -1;
+}
+
+@keyframes zoom{
+    0%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(2);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
