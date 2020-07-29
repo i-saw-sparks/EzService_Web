@@ -14,13 +14,15 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule} from '@angular/material/icon'
 import { MatButtonModule, MatButton } from '@angular/material/button'
 import { MatToolbarModule } from '@angular/material/toolbar'
-// firebase libs
+import { DragDropModule } from '@angular/cdk/drag-drop'
+
+// Firebase Modules
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
-//services
+//Services
 import { AuthService } from './auth.service';
 
 //Components
@@ -31,9 +33,10 @@ import { ToolBarComponent } from './components/tool-bar/tool-bar.component';
 import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
 import { BackGroundComponent } from './components/back-ground/back-ground.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
+import { ShortCutCardComponent } from './components/short-cut-card/short-cut-card.component';
 
 @NgModule({
-  declarations: [AppComponent, BackGroundComponent, LoginFormComponent, Page404Component, LoginComponent, MainViewComponent, ToolBarComponent, AdminPanelComponent],
+  declarations: [AppComponent, BackGroundComponent, LoginFormComponent, Page404Component, LoginComponent, MainViewComponent, ToolBarComponent, AdminPanelComponent, ShortCutCardComponent],
   imports: [
     //Angular Modules
     BrowserModule,
@@ -55,6 +58,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
     MatIconModule,
     MatButtonModule,
     MatToolbarModule,
+    DragDropModule,
 
     //PWA Modules
     ServiceWorkerModule.register('ngsw-worker.js', {
@@ -70,7 +74,8 @@ import { LoginFormComponent } from './components/login-form/login-form.component
     ReactiveFormsModule,
     MatIconModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    DragDropModule
   ]
 })
 export class AppModule {}
