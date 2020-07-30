@@ -1,16 +1,15 @@
 .grid {
   width: 100%;
-  display: inline-block;
   }
   
   .card {
     display: inline-block;
-    padding: 20px 10px;
     width: 30%;
     min-width: 200px;
     max-width: 30%;
-    height: 100%;
-
+    height: auto;
+    vertical-align: top;
+    padding: 0;
     margin-inline-start: 0;
     margin-inline-end: 0;
     margin-left: 20px;
@@ -23,6 +22,30 @@
     border-radius: 10px;
     cursor: pointer;
     font-size: 14px;
+  }
+
+  .mainBtn{
+    width: 100%;
+    height: 100%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+
+  .secondBtn{
+    max-width: 55%;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5%;
+    font-size: small;
+  }
+
+  .title{
+    color: ghostwhite;
+    font-size: medium;
+  }
+
+  .icon{
+    color: ghostwhite;
   }
   
  
