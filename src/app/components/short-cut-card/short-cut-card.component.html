@@ -1,3 +1,10 @@
-<div cdkDropList cdkDropListOrientation="horizontal" class="grid" (cdkDropListDropped)="drop($event)">
-    <div class="card" *ngFor="let timePeriod of timePeriods" cdkDrag>{{timePeriod}}</div>
-  </div>
+<div class="grid">
+  <mat-card class="card" *ngFor="let shortcut of shortcuts">
+    <div class="title">
+      {{shortcut.title}}
+    </div>
+    <button class="bttn" *ngFor="let btnTitle of shortcut.buttons">
+      {{btnTitle}}
+    </button>
+  </mat-card>
+</div>

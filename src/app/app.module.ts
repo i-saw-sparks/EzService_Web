@@ -14,7 +14,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule} from '@angular/material/icon'
 import { MatButtonModule, MatButton } from '@angular/material/button'
 import { MatToolbarModule } from '@angular/material/toolbar'
-import { DragDropModule } from '@angular/cdk/drag-drop'
+import { MatCardModule } from '@angular/material/card'
 
 // Firebase Modules
 import { AngularFireModule } from 'angularfire2';
@@ -58,7 +58,7 @@ import { ShortCutCardComponent } from './components/short-cut-card/short-cut-car
     MatIconModule,
     MatButtonModule,
     MatToolbarModule,
-    DragDropModule,
+    MatCardModule,
 
     //PWA Modules
     ServiceWorkerModule.register('ngsw-worker.js', {
@@ -75,7 +75,7 @@ import { ShortCutCardComponent } from './components/short-cut-card/short-cut-car
     MatIconModule,
     MatButtonModule,
     MatToolbarModule,
-    DragDropModule
+    MatCardModule
   ]
 })
 export class AppModule {}
