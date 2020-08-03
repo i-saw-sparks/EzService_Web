@@ -22,7 +22,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 //services
 import { AuthService } from './auth.service';
-import { SigninComponent } from './signin/signin.component';
+import { SigninComponent } from './components/signin/signin.component';
 
 //Components
 import { Page404Component } from './components/page404/page404.component';
