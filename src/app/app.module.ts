@@ -41,6 +41,7 @@ import { ShortCutCardComponent } from './components/short-cut-card/short-cut-car
 
   declarations: [AppComponent, BackGroundComponent, LoginFormComponent, Page404Component, LoginComponent, MainViewComponent, ToolBarComponent, AdminPanelComponent, ShortCutCardComponent, SigninComponent],
 
+  imports:[
     //Angular Modules
     BrowserModule,
     AppRoutingModule,
