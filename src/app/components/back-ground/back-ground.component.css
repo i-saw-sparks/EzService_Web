@@ -1,0 +1,77 @@
+.loginBackground{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+    background: #63a4ff;
+    background: linear-gradient(-25deg, #ffeb3b, #ffff72, #63a4ff, #1976d2);
+    background-size: 400% 400%;
+    animation: gradient 12s ease infinite;
+    z-index: -1;
+}
+
+.panelBackground{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+    background: #63a4ff;
+    background: radial-gradient(circle 200px,#ffff72 , #63a4ff );
+    background-size: 100% 100%;
+    animation: zoom 30s ease infinite;
+    z-index: -1;
+}
+
+.default{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+    background: #63a4ff;
+    background-size: 400% 400%;
+    z-index: -1;
+}
+
+@keyframes zoom{
+    0%{
+        transform: scale(1);
+    }
+
+    5%{
+        transform: scale(1);
+    }
+
+    40%{
+        transform: scale(200);
+    }
+
+    50%{
+        transform: scale(200);
+    }
+
+    95%{
+        transform: scale(1);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
