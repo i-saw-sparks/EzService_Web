@@ -1,41 +1,54 @@
 import { Injectable } from '@angular/core';
 
 import { AngularFireAuth } from 'angularfire2/auth';
-import * as firebase from 'firebase/app';
 
-import { Observable, of } from 'rxjs';
+import { AngularFireDatabase } from 'angularfire2/database';
+import { Router } from '@angular/router';
 
 @Injectable()
 export class AuthService {
-  user: Observable<firebase.User>;
-
-  constructor(private firebaseAuth: AngularFireAuth) {
-    this.user = firebaseAuth.authState;
+  constructor(
+    private angularFireAuth: AngularFireAuth,
+    private afDB: AngularFireDatabase,
+    private router: Router
+  ) {
+    this.isLogged();
   }
 
-  signup(email: string, password: string) {
-    this.firebaseAuth.auth
+  public signup = (email, password, name, lastname) => {
+    this.angularFireAuth.auth
       .createUserWithEmailAndPassword(email, password)
-      .then((value) => {
-        console.log('Success!', value);
+      .then((response) => {
+        const id = this.angularFireAuth.auth.currentUser.uid;
+        this.afDB.database.ref(`/Usuarios/${id}`).set({
+          id: id,
+          nombre: name,
+          apellidos: lastname,
+          correo: email,
+        });
+        console.log(response);
       })
-      .catch((err) => {
-        console.log('Something went wrong:', err.message);
+      .catch((error) => {
+        console.log(error);
       });
-  }
+  };
 
-  login(email: string, password: string) {
-    this.firebaseAuth.auth
+  public login = (email, password) => {
+    this.angularFireAuth.auth
       .signInWithEmailAndPassword(email, password)
-      .then((value) => {
-        console.log('Nice, it worked!');
+      .then((response) => {
+        console.log(response);
       })
-      .catch((err) => {
-        console.log('Something went wrong:', err.message);
+      .catch((error) => {
+        console.log(error);
       });
+  };
+
+  public isLogged() {
+    return this.angularFireAuth.authState;
   }
 
-  logout() {
-    this.firebaseAuth.auth.signOut();
+  public logout() {
+    this.angularFireAuth.auth.signOut();
   }
 }

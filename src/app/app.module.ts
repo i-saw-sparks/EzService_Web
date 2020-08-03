@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
@@ -14,18 +15,19 @@ import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { BackGroundComponent } from './back-ground/back-ground.component';
-import { LoginFormComponent } from './login-form/login-form.component';
 
 //services
 import { AuthService } from './auth.service';
+import { SigninComponent } from './signin/signin.component';
 
 @NgModule({
-  declarations: [AppComponent, BackGroundComponent, LoginFormComponent],
+  declarations: [AppComponent, BackGroundComponent, SigninComponent],
   imports: [
     //Angular Modules
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
 
     //Initialize Firebase modules
     AngularFireModule,
