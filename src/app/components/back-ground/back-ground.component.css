@@ -19,10 +19,9 @@
     bottom: 0;
     right: 0;
     overflow: auto;
-    background: #63a4ff;
-    background: radial-gradient(circle 200px,#ffff72 , #63a4ff );
+    background: #fff59d;
     background-size: 100% 100%;
-    animation: zoom 30s ease infinite;
+    /*animation: admin 30s ease infinite;*/
     z-index: -1;
 }
 
@@ -38,29 +37,15 @@
     z-index: -1;
 }
 
-@keyframes zoom{
-    0%{
-        transform: scale(1);
+@keyframes admin{
+    0%, 10% {
+        background-color: #63a4ff;
     }
-
-    5%{
-        transform: scale(1);
+    40%, 60% {
+        background-color: #ffff72;
     }
-
-    40%{
-        transform: scale(200);
-    }
-
-    50%{
-        transform: scale(200);
-    }
-
-    95%{
-        transform: scale(1);
-    }
-
-    100%{
-        transform: scale(1);
+    90%, 100% {
+        background-color: #63a4ff;
     }
 }
 
