@@ -36,7 +36,11 @@ import { AdminPanelComponent } from './components/admin-panel/admin-panel.compon
 import { BackGroundComponent } from './components/back-ground/back-ground.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { ShortCutCardComponent } from './components/short-cut-card/short-cut-card.component';
+
+import { UsersCrudViewComponent } from './components/users-crud-view/users-crud-view.component';
+
 import { Routes } from '@angular/router';
+
 
 const appRoutes: Routes = [
   {
@@ -66,7 +70,12 @@ const appRoutes: Routes = [
     SigninComponent,
   ],
 
-  imports: [
+
+  declarations: [AppComponent, BackGroundComponent, LoginFormComponent, Page404Component, LoginComponent, MainViewComponent, ToolBarComponent, AdminPanelComponent, ShortCutCardComponent, SigninComponent, UsersCrudViewComponent],
+
+  imports:[
+
+
     //Angular Modules
     BrowserModule,
     AppRoutingModule,
