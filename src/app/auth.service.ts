@@ -38,6 +38,8 @@ export class AuthService {
       .signInWithEmailAndPassword(email, password)
       .then((response) => {
         console.log(response);
+        this.router.navigate(['adminPanel']);
+        console.log('Login exitoso');
       })
       .catch((error) => {
         console.log(error);
