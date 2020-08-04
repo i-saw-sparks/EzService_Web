@@ -12,10 +12,10 @@ import { MatFormFieldModule, MatFormField } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 
-import { MatIconModule} from '@angular/material/icon'
-import { MatButtonModule, MatButton } from '@angular/material/button'
-import { MatToolbarModule } from '@angular/material/toolbar'
-import { MatCardModule } from '@angular/material/card'
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule, MatButton } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCardModule } from '@angular/material/card';
 
 // Firebase Modules
 import { AngularFireModule } from 'angularfire2';
@@ -36,12 +36,37 @@ import { AdminPanelComponent } from './components/admin-panel/admin-panel.compon
 import { BackGroundComponent } from './components/back-ground/back-ground.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { ShortCutCardComponent } from './components/short-cut-card/short-cut-card.component';
+import { Routes } from '@angular/router';
 
+const appRoutes: Routes = [
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
+    path: 'signin',
+    component: SigninComponent,
+  },
+  {
+    path: 'adminPanel',
+    component: AdminPanelComponent,
+  },
+];
 @NgModule({
+  declarations: [
+    AppComponent,
+    BackGroundComponent,
+    LoginFormComponent,
+    Page404Component,
+    LoginComponent,
+    MainViewComponent,
+    ToolBarComponent,
+    AdminPanelComponent,
+    ShortCutCardComponent,
+    SigninComponent,
+  ],
 
-  declarations: [AppComponent, BackGroundComponent, LoginFormComponent, Page404Component, LoginComponent, MainViewComponent, ToolBarComponent, AdminPanelComponent, ShortCutCardComponent, SigninComponent],
-
-  imports:[
+  imports: [
     //Angular Modules
     BrowserModule,
     AppRoutingModule,
@@ -80,8 +105,7 @@ import { ShortCutCardComponent } from './components/short-cut-card/short-cut-car
     MatIconModule,
     MatButtonModule,
     MatToolbarModule,
-    MatCardModule
-  ]
-
+    MatCardModule,
+  ],
 })
 export class AppModule {}
