@@ -68,10 +68,9 @@ const appRoutes: Routes = [
     AdminPanelComponent,
     ShortCutCardComponent,
     SigninComponent,
+    UsersCrudViewComponent
   ],
 
-
-  declarations: [AppComponent, BackGroundComponent, LoginFormComponent, Page404Component, LoginComponent, MainViewComponent, ToolBarComponent, AdminPanelComponent, ShortCutCardComponent, SigninComponent, UsersCrudViewComponent],
 
   imports:[
 
