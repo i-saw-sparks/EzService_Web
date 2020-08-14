@@ -1,6 +1,6 @@
 <div class="grid">
   <mat-card class="card" *ngFor="let shortcut of shortcuts">
-    <button mat-button class="mainBtn">
+    <button mat-button (click)="shortcut.onClick()"  class="mainBtn">
       <mat-icon class="icon">
         {{shortcut.icon}}
       </mat-icon>
@@ -8,7 +8,7 @@
         {{shortcut.title}}
       </div>
     </button>
-    <button mat-raised-button class="secondBtn" *ngFor="let btnTitle of shortcut.buttons">
+    <button mat-raised-button class="secondBtn"   *ngFor="let btnTitle of shortcut.buttons">
       {{btnTitle}}
     </button>
   </mat-card>
