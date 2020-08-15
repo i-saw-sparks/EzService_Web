@@ -15,9 +15,9 @@ const routes: Routes = [
   {
     path: 'root', component: MainViewComponent, canActivate: [AngularFireAuthGuard],
     children: [
+      { path: 'adminPanel', component: AdminPanelComponent},
+      { path: 'usersCrud', component: UsersCrudViewComponent},
       { path: '', redirectTo: 'adminPanel', pathMatch: 'full' },
-      { path: 'adminPanel', component: AdminPanelComponent, canActivate: [AngularFireAuthGuard] },
-      { path: 'usersCrud', component: UsersCrudViewComponent, canActivate: [AngularFireAuthGuard] }
     ]
   },
   { path: '', redirectTo: '/login', pathMatch: 'full' },

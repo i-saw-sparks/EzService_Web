@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import { ArrayType } from '@angular/compiler';
+import { Component } from '@angular/core';
+import { Router, RouterEvent } from '@angular/router'
 /**
  * @title Drag&Drop horizontal sorting
  */
@@ -10,34 +10,38 @@ import { ArrayType } from '@angular/compiler';
 })
 
 export class ShortCutCardComponent {
+  constructor (private router:Router){
+
+  }
+
   shortcuts = [
-    new cardContent('Estadisticas', ['Reportes', '?'],'analytics', ''),
-    new cardContent('Usuarios', [], 'accessibility', 'root/usersCrud'),
-    new cardContent('Trabajadores', [], 'assignment_ind', ''),
-    new cardContent('Solicitudes de registro', ['Trabajadores', 'Intermediarios'], 'all_inbox', ''),
-    new cardContent('Categorias', [], 'bookmarks', ''),
-    new cardContent('Profesiones', [], 'work', ''), 
-    new cardContent('Administradores', [], 'admin_panel_settings', '')
+    new cardContent('Estadisticas', ['Reportes', '?'], 'analytics', '', this.router),
+    new cardContent('Usuarios', [], 'accessibility', 'root/usersCrud', this.router),
+    new cardContent('Trabajadores', [], 'assignment_ind', '', this.router),
+    new cardContent('Solicitudes de registro', ['Trabajadores', 'Intermediarios'], 'all_inbox', '', this.router),
+    new cardContent('Categorias', [], 'bookmarks', '', this.router),
+    new cardContent('Profesiones', [], 'work', '', this.router),
+    new cardContent('Administradores', [], 'admin_panel_settings', '', this.router)
   ];
 
 }
 
-class cardContent{
-  title:string;
+class cardContent {
+  title: string;
   buttons = [];
-  icon:string;
-  route:string;
-  path:string;
+  icon: string;
+  route: string;
+  path: string;
 
-  constructor(title:string, buttons, icon, route){
+  constructor(title: string, buttons, icon, route, private router: Router) {
     this.title = title;
     this.buttons = buttons;
     this.icon = icon;
     this.route = route
   }
 
-  onClick(){
-    this.path = '../'+this.route;
-    window.open(this.path, '_self')
+  onClick() {
+    this.path = '../' + this.route;
+    this.router.navigate([this.path]);
   }
 }
