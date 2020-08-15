@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/auth.service';
+import { app } from 'firebase';
 
 @Component({
   selector: 'app-tool-bar',
@@ -7,14 +7,10 @@ import { AuthService } from 'src/app/auth.service';
   styleUrls: ['./tool-bar.component.css']
 })
 export class ToolBarComponent {
-  appTitle:string;
+  appTitle: string;
 
-  constructor(public authService: AuthService) {
+  constructor() {
     this.appTitle = 'EzService';
-   }
-
-   logout(){
-    this.authService.logout();
-   }
+  }
 
 }

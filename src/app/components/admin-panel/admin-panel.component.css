@@ -1,16 +1,24 @@
-
 .mainPanel {
-    position: relative;
-    z-index: 1;
-    background: #FFFFFF;
-    max-width: 75%;
-    height: auto;
-    margin: 40px auto 0px;
-    padding: 45px;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    text-align: center;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-    border-radius: 15px;
-    min-height: 70%;
-  }
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 75%;
+  height: auto;
+  margin: 40px auto 0px;
+  padding: 45px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 15px;
+  min-height: 70%;
+}
+
+.logout {
+  position: absolute;
+  top: -15px;
+  margin-left: 48%;
+  background-color: tomato;
+  width: ;
+  padding: 0;
+}
