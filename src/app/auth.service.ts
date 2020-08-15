@@ -41,7 +41,7 @@ export class AuthService {
       .signInWithEmailAndPassword(email, password)
       .then((response) => {
         console.log(response);
-        this.router.navigate(['adminPanel']);
+        this.router.navigate(['root/adminPanel']);
         console.log('Login exitoso');
       })
       .catch((error) => {

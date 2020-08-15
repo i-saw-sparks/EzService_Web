@@ -12,7 +12,7 @@ import { ArrayType } from '@angular/compiler';
 export class ShortCutCardComponent {
   shortcuts = [
     new cardContent('Estadisticas', ['Reportes', '?'],'analytics', ''),
-    new cardContent('Usuarios', [], 'accessibility', 'usersCrud'),
+    new cardContent('Usuarios', [], 'accessibility', 'root/usersCrud'),
     new cardContent('Trabajadores', [], 'assignment_ind', ''),
     new cardContent('Solicitudes de registro', ['Trabajadores', 'Intermediarios'], 'all_inbox', ''),
     new cardContent('Categorias', [], 'bookmarks', ''),

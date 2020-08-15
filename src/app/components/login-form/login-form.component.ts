@@ -5,6 +5,7 @@ import { AuthService } from 'src/app/auth.service';
   selector: 'app-login-form',
   templateUrl: './login-form.component.html',
   styleUrls: ['./login-form.component.css'],
+  animations:[]
 })
 export class LoginFormComponent {
   loginParams: any = {};
