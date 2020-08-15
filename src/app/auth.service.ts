@@ -15,6 +15,7 @@ export class AuthService {
     this.isLogged();
   }
 
+  /*
   public signup = (email, password, name, lastname) => {
     this.angularFireAuth.auth
       .createUserWithEmailAndPassword(email, password)
@@ -32,6 +33,7 @@ export class AuthService {
         console.log(error);
       });
   };
+  */
 
   public login = (email, password) => {
     this.angularFireAuth.auth
@@ -51,6 +53,13 @@ export class AuthService {
   }
 
   public logout() {
-    this.angularFireAuth.auth.signOut();
+    this.angularFireAuth.auth.signOut().then((response) => {
+      console.log(response);
+      this.router.navigate(['login']);
+      console.log('Logout');
+    })
+    .catch((error) => {
+      console.log(error);
+    });
   }
 }

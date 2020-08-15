@@ -1,18 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/auth.service';
 
 @Component({
   selector: 'app-tool-bar',
   templateUrl: './tool-bar.component.html',
   styleUrls: ['./tool-bar.component.css']
 })
-export class ToolBarComponent implements OnInit {
+export class ToolBarComponent {
   appTitle:string;
 
-  constructor() {
+  constructor(public authService: AuthService) {
     this.appTitle = 'EzService';
    }
 
-  ngOnInit(): void {
-  }
+   logout(){
+    this.authService.logout();
+    
+   }
 
 }

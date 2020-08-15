@@ -17,11 +17,13 @@ export class SigninComponent {
     console.log(this.user.name);
     console.log(this.user.lastname);
 
+    /*
     this.authService.signup(
       this.user.email,
       this.user.password,
       this.user.name,
       this.user.lastname
     );
+    */
   }
 }

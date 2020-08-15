@@ -22,6 +22,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthGuardModule } from '@angular/fire/auth-guard';
 
 //Services
 import { AuthService } from './auth.service';
@@ -39,23 +40,6 @@ import { ShortCutCardComponent } from './components/short-cut-card/short-cut-car
 
 import { UsersCrudViewComponent } from './components/users-crud-view/users-crud-view.component';
 
-import { Routes } from '@angular/router';
-
-
-const appRoutes: Routes = [
-  {
-    path: 'login',
-    component: LoginComponent,
-  },
-  {
-    path: 'signin',
-    component: SigninComponent,
-  },
-  {
-    path: 'adminPanel',
-    component: AdminPanelComponent,
-  },
-];
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,10 +55,7 @@ const appRoutes: Routes = [
     UsersCrudViewComponent
   ],
 
-
-  imports:[
-
-
+  imports: [
     //Angular Modules
     BrowserModule,
     AppRoutingModule,
@@ -87,6 +68,7 @@ const appRoutes: Routes = [
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
+    AngularFireAuthGuardModule,
 
     //Angular Material
     MatFormFieldModule,
@@ -116,4 +98,4 @@ const appRoutes: Routes = [
     MatCardModule,
   ],
 })
-export class AppModule {}
+export class AppModule { }
