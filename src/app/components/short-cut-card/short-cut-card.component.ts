@@ -1,18 +1,31 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewChecked } from '@angular/core';
 import { Router, RouterEvent } from '@angular/router'
-/**
- * @title Drag&Drop horizontal sorting
- */
+import { trigger, state, style, transition, animate } from '@angular/animations';
+
 @Component({
   selector: 'app-short-cut-card',
   templateUrl: 'short-cut-card.component.html',
   styleUrls: ['short-cut-card.component.css'],
+  animations: [
+    trigger('fadeInState',
+      [
+        state('loading', style({opacity: 0})),
+        state('loaded', style({opacity: 1})),
+        transition('loading => loaded', animate('500ms ease-out'))
+      ]
+    )
+  ]
 })
 
-export class ShortCutCardComponent {
+export class ShortCutCardComponent implements AfterViewChecked{
+  loading: boolean;
   constructor (private router:Router){
-
+    this.loading = true;
   }
+  ngAfterViewChecked(): void {
+    this.loading = false;
+  }
+
 
   shortcuts = [
     new cardContent('Estadisticas', ['Reportes', '?'], 'analytics', '', this.router),

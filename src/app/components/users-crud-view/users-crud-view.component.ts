@@ -12,5 +12,4 @@ export class UsersCrudViewComponent {
   onClick() {
     this.router.navigate(['../root/adminPanel']);
   }
-
 }
