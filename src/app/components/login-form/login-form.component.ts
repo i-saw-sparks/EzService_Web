@@ -9,7 +9,9 @@ import { AuthService } from 'src/app/auth.service';
 export class LoginFormComponent {
   loginParams: any = {};
 
-  constructor(public authService: AuthService) {}
+  constructor(public authService: AuthService) {
+
+  }
 
   login() {
     this.authService.login(this.loginParams.email, this.loginParams.password);

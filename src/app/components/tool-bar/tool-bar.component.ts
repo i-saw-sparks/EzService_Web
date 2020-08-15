@@ -15,7 +15,6 @@ export class ToolBarComponent {
 
    logout(){
     this.authService.logout();
-    
    }
 
 }
