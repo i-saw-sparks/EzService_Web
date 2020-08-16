@@ -1,6 +1,8 @@
-import { Component, AfterViewChecked } from '@angular/core';
+import { Component, AfterViewChecked, OnDestroy, AfterViewInit, OnChanges, OnInit, AfterContentInit } from '@angular/core';
 import { Router, RouterEvent } from '@angular/router'
-import { trigger, state, style, transition, animate } from '@angular/animations';
+import { trigger, state, style, transition, animate, group, query, animateChild } from '@angular/animations';
+import { renderFlagCheckIfStmt } from '@angular/compiler/src/render3/view/template';
+import { ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-short-cut-card',
@@ -9,23 +11,32 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   animations: [
     trigger('fadeInState',
       [
-        state('loading', style({opacity: 0})),
-        state('loaded', style({opacity: 1})),
-        transition('loading => loaded', animate('500ms ease-out'))
+        state('loading', style({ opacity: 0 })),
+        state('loaded', style({ opacity: 1 })),
+        transition('loading => loaded', group([query('@fadeInIcon', animateChild()), animate('500ms')]))
       ]
+    ),
+    trigger('fadeInIcon',
+    [
+      state('loading', style({ opacity: 0.05 })),
+      state('loaded', style({ opacity: 1 })),
+      transition('loading => loaded', group([animate('500ms 500ms')]))
+    ]
     )
-  ]
+  ], 
 })
 
 export class ShortCutCardComponent implements AfterViewChecked{
   loading: boolean;
-  constructor (private router:Router){
-    this.loading = true;
-  }
-  ngAfterViewChecked(): void {
-    this.loading = false;
+ 
+  constructor(private router: Router, private cdRef:ChangeDetectorRef) {
+    this.loading = true; 
   }
 
+  ngAfterViewChecked(): void {
+    this.loading = false;
+    this.cdRef.detectChanges();
+  }
 
   shortcuts = [
     new cardContent('Estadisticas', ['Reportes', '?'], 'analytics', '', this.router),

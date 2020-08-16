@@ -1,4 +1,4 @@
-.loginBackground{
+.loginBackground {
     position: fixed;
     top: 0;
     left: 0;
@@ -12,7 +12,7 @@
     z-index: -1;
 }
 
-.panelBackground{
+.panelBackground {
     position: fixed;
     top: 0;
     left: 0;
@@ -25,7 +25,7 @@
     z-index: -1;
 }
 
-.default{
+.default {
     position: fixed;
     top: 0;
     left: 0;
@@ -37,7 +37,7 @@
     z-index: -1;
 }
 
-@keyframes admin{
+@keyframes admin {
     0%, 10% {
         background-color: #63a4ff;
     }

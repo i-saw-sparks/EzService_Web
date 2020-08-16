@@ -1,4 +1,4 @@
-import { Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-back-ground',
@@ -6,11 +6,7 @@ import { Component, Input} from '@angular/core';
   styleUrls: ['./back-ground.component.css']
 })
 export class BackGroundComponent {
- @Input() bgStyle:string;
+  @Input() bgStyle: string;
 
-  constructor() { 
-    
-  }
-
-
+  constructor() {}
 }

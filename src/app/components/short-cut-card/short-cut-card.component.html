@@ -1,14 +1,14 @@
 <div class="grid">
-  <mat-card class="card" *ngFor="let shortcut of shortcuts">
+  <mat-card class="card" *ngFor="let shortcut of shortcuts"  [@fadeInState]="loading ? 'loading' : 'loaded'">
     <button mat-button (click)="shortcut.onClick()"  class="mainBtn">
-      <mat-icon class="icon">
+      <mat-icon class="icon" [@fadeInIcon]="loading ? 'loading' : 'loaded'">
         {{shortcut.icon}}
       </mat-icon>
-      <div class="title">
+      <div class="title" [@fadeInIcon]="loading ? 'loading' : 'loaded'">
         {{shortcut.title}}
       </div>
     </button>
-    <button mat-raised-button class="secondBtn"   *ngFor="let btnTitle of shortcut.buttons">
+    <button mat-raised-button class="secondBtn" [@fadeInIcon]="loading ? 'loading' : 'loaded'"  *ngFor="let btnTitle of shortcut.buttons">
       {{btnTitle}}
     </button>
   </mat-card>

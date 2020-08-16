@@ -9,8 +9,8 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   animations: [
     trigger('fadeInState',
       [
-        state('loading', style({opacity: 0})),
-        state('loaded', style({opacity: 1})),
+        state('loading', style({ opacity: 0 })),
+        state('loaded', style({ opacity: 1 })),
         transition('loading => loaded', animate('500ms ease-out'))
       ]
     )
@@ -27,7 +27,6 @@ export class LoginFormComponent implements AfterViewChecked {
   ngAfterViewChecked(): void {
     this.loading = false;
   }
-
 
   login() {
     this.authService.login(this.loginParams.email, this.loginParams.password);
