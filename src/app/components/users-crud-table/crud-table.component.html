@@ -1,0 +1,60 @@
+<div class="table-container">
+  <table mat-table [dataSource]="dataSource" class="table">
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element">
+        <mat-form-field appearance="standard" class="input">
+          <input matInput value="{{element.nombre}}" />
+        </mat-form-field>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="lastName">
+      <th mat-header-cell *matHeaderCellDef> Last name </th>
+      <td mat-cell *matCellDef="let element">
+        <mat-form-field appearance="standard" class="input">
+          <input matInput value="{{element.apellidos}}" />
+        </mat-form-field>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="eMail">
+      <th mat-header-cell *matHeaderCellDef> Email </th>
+      <td mat-cell *matCellDef="let element">
+        <mat-form-field appearance="standard" class="inputEmail">
+          <input matInput type="email" value="{{element.correo}}" />
+        </mat-form-field>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> id </th>
+      <td mat-cell *matCellDef="let element">
+        {{element.id}}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="save">
+      <th mat-header-cell *matHeaderCellDef> </th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-raised-button color="primary">
+          <mat-icon color="accent">check</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="delete">
+      <th mat-header-cell *matHeaderCellDef> </th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-raised-button class="delete-button">
+          <mat-icon class="delete-icon">delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="['name', 'lastName', 'eMail','id', 'save', 'delete']; sticky: true" class="header-row"></tr>
+    <tr mat-row *matRowDef="let row; columns: ['name', 'lastName', 'eMail','id', 'save', 'delete'];"></tr>
+
+  </table>
+</div>
