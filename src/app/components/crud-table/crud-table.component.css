@@ -1,0 +1,11 @@
+.table-container{
+    height: auto;
+    max-height: 80vh;
+    width: 100%;
+    overflow: auto;
+}
+
+.table{
+    overflow: auto;
+    width: 100%;
+}

@@ -16,6 +16,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule, MatButton } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
+import { MatTableModule, MatTable } from '@angular/material/table';
 
 // Firebase Modules
 import { AngularFireModule } from '@angular/fire';
@@ -83,6 +84,7 @@ import { CrudTableComponent } from './components/crud-table/crud-table.component
     MatButtonModule,
     MatToolbarModule,
     MatCardModule,
+    MatTableModule,
 
     //PWA Modules
     ServiceWorkerModule.register('ngsw-worker.js', {
@@ -100,6 +102,7 @@ import { CrudTableComponent } from './components/crud-table/crud-table.component
     MatButtonModule,
     MatToolbarModule,
     MatCardModule,
+    MatTableModule,
   ],
 })
 export class AppModule { }
