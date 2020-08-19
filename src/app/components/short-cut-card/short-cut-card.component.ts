@@ -40,7 +40,7 @@ export class ShortCutCardComponent implements AfterViewChecked{
 
   shortcuts = [
     new cardContent('Usuarios', [], 'accessibility', 'root/usersCrud', this.router),
-    new cardContent('Trabajadores', [], 'assignment_ind', '', this.router),
+    new cardContent('Trabajadores', [], 'assignment_ind', 'root/workerRegister', this.router),
     new cardContent('Categorias', [], 'bookmarks', '', this.router),
     new cardContent('Estadisticas', ['Reportes', '?'], 'analytics', '', this.router),
     new cardContent('Profesiones', [], 'work', '', this.router),

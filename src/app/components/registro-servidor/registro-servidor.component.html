@@ -1,0 +1,12 @@
+<form class="register-form">
+    <mat-form-field appearance="outline">
+        <mat-label>Nombre</mat-label>
+        <input matInput [(ngModel)]="domName" [ngModelOptions]="{ standalone: true }"/>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Profesion</mat-label>
+        <input matInput [(ngModel)]="domProfesion" [ngModelOptions]="{ standalone: true }"/>
+    </mat-form-field>
+    <p></p>
+    <button mat-raised-button color="primary" (click)="save()">Registrar</button>
+</form>

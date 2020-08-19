@@ -39,6 +39,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { ShortCutCardComponent } from './components/short-cut-card/short-cut-card.component';
 
 import { UsersCrudViewComponent } from './components/users-crud-view/users-crud-view.component';
+import { RegistroServidorComponent } from './components/registro-servidor/registro-servidor.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { UsersCrudViewComponent } from './components/users-crud-view/users-crud-
     AdminPanelComponent,
     ShortCutCardComponent,
     SigninComponent,
-    UsersCrudViewComponent
+    UsersCrudViewComponent,
+    RegistroServidorComponent
   ],
 
   imports: [
