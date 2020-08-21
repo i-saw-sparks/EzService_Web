@@ -18,14 +18,19 @@ export class CrudTableComponent {
   dataSource: Observable<any>;
   
 
-  constructor(db: AngularFireDatabase) { 
+  constructor(private db: AngularFireDatabase) { 
     this.itemRef = db.list('Usuarios');
     this.dataSource = this.itemRef.valueChanges();
   }
 
   save(obj){
-    console.log(obj);
     this.itemRef.update(obj.id,{apellidos:obj.apellidos, correo:obj.correo, nombre:obj.nombre});
+  }
+
+  delete(obj){
+    if(typeof obj.id !== "undefined"){
+      this.itemRef.remove(obj.id); 
+    }
   }
 
 }

@@ -16,12 +16,12 @@ export class AuthService {
     this.isLogged();
   }
 
-  /*
+  
   public signup = (email, password, name, lastname) => {
-    this.angularFireAuth.auth
+    this.angularFireAuth
       .createUserWithEmailAndPassword(email, password)
       .then((response) => {
-        const id = this.angularFireAuth.auth.currentUser.uid;
+        const id = this.angularFireAuth.currentUser;
         this.afDB.database.ref(`/Usuarios/${id}`).set({
           id: id,
           nombre: name,
@@ -34,7 +34,7 @@ export class AuthService {
         console.log(error);
       });
   };
-  */
+  
 
   public login = (email, password) => {
     this.angularFireAuth

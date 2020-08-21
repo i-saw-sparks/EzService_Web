@@ -28,7 +28,6 @@ import { AngularFireAuthGuardModule } from '@angular/fire/auth-guard';
 
 //Services
 import { AuthService } from './auth.service';
-import { SigninComponent } from './components/signin/signin.component';
 
 //Components
 import { Page404Component } from './components/page404/page404.component';
@@ -55,7 +54,6 @@ import { CrudTableComponent } from './components/users-crud-table/crud-table.com
     ToolBarComponent,
     AdminPanelComponent,
     ShortCutCardComponent,
-    SigninComponent,
     UsersCrudViewComponent,
     RegistroServidorComponent,
     CrudTableComponent
