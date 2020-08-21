@@ -12,6 +12,8 @@ import { map } from 'rxjs/operators';
 })
 export class CrudTableComponent {
 
+  actName:string;
+
   itemRef: AngularFireList<any>;
   dataSource: Observable<any>;
   
@@ -19,6 +21,11 @@ export class CrudTableComponent {
   constructor(db: AngularFireDatabase) { 
     this.itemRef = db.list('Usuarios');
     this.dataSource = this.itemRef.valueChanges();
+  }
+
+  save(obj){
+    console.log(obj);
+    this.itemRef.update(obj.id,{apellidos:obj.apellidos, correo:obj.correo, nombre:obj.nombre});
   }
 
 }
