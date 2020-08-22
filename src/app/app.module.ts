@@ -39,9 +39,9 @@ import { BackGroundComponent } from './components/back-ground/back-ground.compon
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { ShortCutCardComponent } from './components/short-cut-card/short-cut-card.component';
 
-import { UsersCrudViewComponent } from './components/users-crud-view/users-crud-view.component';
+import { CrudViewComponent } from './components/crud-view/users-crud-view.component';
 import { RegistroServidorComponent } from './components/registro-servidor/registro-servidor.component';
-import { CrudTableComponent } from './components/users-crud-table/crud-table.component';
+import { UsersTableComponent } from './components/users-crud-table/crud-table.component';
 
 @NgModule({
   declarations: [
@@ -54,9 +54,9 @@ import { CrudTableComponent } from './components/users-crud-table/crud-table.com
     ToolBarComponent,
     AdminPanelComponent,
     ShortCutCardComponent,
-    UsersCrudViewComponent,
+    CrudViewComponent,
     RegistroServidorComponent,
-    CrudTableComponent
+    UsersTableComponent
   ],
 
   imports: [
