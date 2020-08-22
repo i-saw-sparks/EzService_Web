@@ -1,8 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { AngularFireDatabase, AngularFireList, AngularFireObject } from '@angular/fire/database';
-import { MatTableDataSource } from '@angular/material/table';
+import { Component} from '@angular/core';
+import { AngularFireDatabase, AngularFireList} from '@angular/fire/database';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 
 
 @Component({
@@ -11,8 +9,6 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./crud-table.component.css']
 })
 export class UsersTableComponent {
-
-  actName:string;
 
   itemRef: AngularFireList<any>;
   dataSource: Observable<any>;

@@ -7,6 +7,8 @@ import { AdminPanelComponent } from './components/admin-panel/admin-panel.compon
 import { CrudViewComponent } from './components/crud-view/users-crud-view.component';
 import { RegistroServidorComponent } from './components/registro-servidor/registro-servidor.component';
 import { UsersTableComponent } from './components/users-crud-table/crud-table.component';
+import { WorkersCrudTableComponent } from './components/workers-crud-table/workers-crud-table.component'
+
 import { AngularFireAuthGuard } from '@angular/fire/auth-guard';
 
 
@@ -21,10 +23,10 @@ const routes: Routes = [
       {
         path: 'crud', component: CrudViewComponent,
         children: [
-          {path: 'users', component: UsersTableComponent}
+          {path: 'users', component: UsersTableComponent},
+          {path: 'workers', component: WorkersCrudTableComponent},
         ],
       },
-      { path: 'workerRegister', component: RegistroServidorComponent },
       { path: '', redirectTo: 'adminPanel', pathMatch: 'full' },
     ]
   },
