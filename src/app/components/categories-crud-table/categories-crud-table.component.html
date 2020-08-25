@@ -1,0 +1,49 @@
+<div class="table-container">
+    <table mat-table [dataSource]="dataSource" class="table">
+  
+      <ng-container matColumnDef="img">
+        <th mat-header-cell *matHeaderCellDef> Pic </th>
+        <td mat-cell *matCellDef="let element">
+          <img src="{{element.Imagen}}" class="profilePic"  >
+        </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element">
+          <mat-form-field appearance="standard" class="input">
+            <input matInput [(ngModel)]="element.Nombre" />
+          </mat-form-field>
+        </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> id </th>
+        <td mat-cell *matCellDef="let element">
+          {{element.id}}
+        </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="save">
+        <th mat-header-cell *matHeaderCellDef> </th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-raised-button color="primary" (click)="save(element)">
+            <mat-icon color="accent">check</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="delete">
+        <th mat-header-cell *matHeaderCellDef> </th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-raised-button class="delete-button" (click)="delete(element)">
+            <mat-icon class="delete-icon">delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="['img', 'name', 'id', 'save', 'delete']; sticky: true" class="header-row"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['img', 'name','id', 'save', 'delete'];"></tr>
+  
+    </table>
+  </div>

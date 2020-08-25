@@ -43,6 +43,7 @@ import { CrudViewComponent } from './components/crud-view/users-crud-view.compon
 import { RegistroServidorComponent } from './components/registro-servidor/registro-servidor.component';
 import { UsersTableComponent } from './components/users-crud-table/crud-table.component';
 import { WorkersCrudTableComponent } from './components/workers-crud-table/workers-crud-table.component';
+import { CategoriesCrudTableComponent } from './components/categories-crud-table/categories-crud-table.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { WorkersCrudTableComponent } from './components/workers-crud-table/worke
     CrudViewComponent,
     RegistroServidorComponent,
     UsersTableComponent,
-    WorkersCrudTableComponent
+    WorkersCrudTableComponent,
+    CategoriesCrudTableComponent
   ],
 
   imports: [

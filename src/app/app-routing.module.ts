@@ -8,8 +8,10 @@ import { CrudViewComponent } from './components/crud-view/users-crud-view.compon
 import { RegistroServidorComponent } from './components/registro-servidor/registro-servidor.component';
 import { UsersTableComponent } from './components/users-crud-table/crud-table.component';
 import { WorkersCrudTableComponent } from './components/workers-crud-table/workers-crud-table.component'
+import { CategoriesCrudTableComponent } from './components/categories-crud-table/categories-crud-table.component';
 
 import { AngularFireAuthGuard } from '@angular/fire/auth-guard';
+
 
 
 
@@ -25,6 +27,7 @@ const routes: Routes = [
         children: [
           {path: 'users', component: UsersTableComponent},
           {path: 'workers', component: WorkersCrudTableComponent},
+          {path: 'categories', component: CategoriesCrudTableComponent}
         ],
       },
       { path: '', redirectTo: 'adminPanel', pathMatch: 'full' },
