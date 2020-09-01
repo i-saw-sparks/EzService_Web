@@ -60,10 +60,15 @@
             </td>
         </ng-container>
 
-        <tr mat-header-row *matHeaderRowDef="['img', 'name', 'lastName', 'profession','id', 'save', 'delete']; sticky: true"
+        <tr mat-header-row
+            *matHeaderRowDef="['img', 'name', 'lastName', 'profession','id', 'save', 'delete']; sticky: true"
             class="header-row"></tr>
-        <tr mat-row *matRowDef="let row; columns: ['img', 'name', 'lastName', 'profession','id', 'save', 'delete'];"></tr>
+        <tr mat-row *matRowDef="let row; columns: ['img', 'name', 'lastName', 'profession','id', 'save', 'delete'];">
+        </tr>
 
     </table>
 </div>
+<button mat-raised-button class="add">
+    <mat-icon matSuffix>add_circle</mat-icon>
+</button>
 <app-registro-servidor></app-registro-servidor>
