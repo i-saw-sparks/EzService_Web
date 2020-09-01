@@ -10,7 +10,7 @@
 
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef> Name </th>
-      <td mat-cell *matCellDef="let element">
+      <td mat-cell *matCellDef="let element" class="inputContainer">
         <mat-form-field appearance="standard" class="input">
           <input matInput [(ngModel)]="element.nombre" />
         </mat-form-field>
@@ -19,7 +19,7 @@
 
     <ng-container matColumnDef="lastName">
       <th mat-header-cell *matHeaderCellDef> Last name </th>
-      <td mat-cell *matCellDef="let element">
+      <td mat-cell *matCellDef="let element" class="inputContainer">
         <mat-form-field appearance="standard" class="input">
           <input matInput [(ngModel)]="element.apellidos" />
         </mat-form-field>

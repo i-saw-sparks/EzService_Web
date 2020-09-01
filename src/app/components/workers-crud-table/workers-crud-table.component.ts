@@ -55,7 +55,7 @@ export class DialogContentExampleDialog {
   }
 
   add(obj){
-    this.workers.push({ nombre: obj.nombre, apellidos: obj.apellidos, profesion: "undefined", userId:obj.id }).then(ref => {
+    this.workers.push({ nombre: obj.nombre, apellidos: obj.apellidos, profesion: "undefined",imageProfile:obj.imageProfile, userId:obj.id }).then(ref => {
       this.workers.update(ref.key,{id:ref.key})
     })
   }

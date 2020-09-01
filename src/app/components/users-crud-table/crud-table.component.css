@@ -12,13 +12,8 @@
 }
 
 .input{
-    min-width: 100px;
-    max-width: 80%;
-}
-
-.inputEmail{
-    min-width: 200px;
-    max-width: 80%;
+    max-width: 85%;
+    margin: 0;
 }
 
 .delete-button{
@@ -32,4 +27,24 @@
 .profilePic{
     max-width: 50px;
     max-height: 50px;
+    padding-right: 10px;
+}
+
+.add{
+    margin-top: 5px;
+    background-color: olivedrab;
+    color: ghostwhite;
+}
+
+.id{
+    padding-right: 10px;
+}
+
+.inputContainer{
+    max-width: 14vh;
+}
+
+.inputEmail{
+    min-width: 200px;
+    max-width: 80%;
 }
