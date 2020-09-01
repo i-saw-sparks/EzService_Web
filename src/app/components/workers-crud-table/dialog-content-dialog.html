@@ -1,0 +1,49 @@
+
+  
+
+<div mat-dialog-content class="mat-typography" cdkFocusInitial>
+    <div class="dialog-table">
+        <table mat-table [dataSource]="dataSource">
+
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> Name </th>
+                <td mat-cell *matCellDef="let element" class="nombre">
+                    {{element.nombre}}
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="lastName">
+                <th mat-header-cell *matHeaderCellDef> Last name </th>
+                <td mat-cell *matCellDef="let element" class="nombre">
+                    {{element.apellidos}}
+                </td>
+            </ng-container>
+
+
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> id </th>
+                <td mat-cell *matCellDef="let element" class="id">
+                    {{element.id}}
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="save">
+                <th mat-header-cell *matHeaderCellDef> </th>
+                <td mat-cell *matCellDef="let element">
+                    <button mat-raised-button class="add-user-button">
+                        <mat-icon >add</mat-icon>
+                    </button>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="['name', 'lastName', 'id', 'save']; sticky: true" class="header-row">
+            </tr>
+            <tr mat-row *matRowDef="let row; columns: ['name', 'lastName', 'id', 'save'];"></tr>
+
+        </table>
+    </div>
+</div>
+
+<button mat-raised-button mat-dialog-close class="close"> 
+    <mat-icon>cancel</mat-icon>
+</button>

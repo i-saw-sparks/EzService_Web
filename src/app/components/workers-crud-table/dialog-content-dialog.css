@@ -1,0 +1,22 @@
+.nombre{
+    padding-right: 10px;
+}
+
+.id{
+    padding-right: 10px;
+}
+
+.close{
+  background-color: tomato;
+  padding: 0;
+  color: ghostwhite;
+  margin: auto;
+  display: block;
+  position: relative;
+  margin-top: 10px;
+}
+
+.add-user-button{
+    color: olivedrab;
+    background-color: ghostwhite;
+}

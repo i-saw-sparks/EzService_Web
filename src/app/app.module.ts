@@ -13,10 +13,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 
 import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule, MatButton } from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
-import { MatTableModule, MatTable } from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog'
 
 
 // Firebase Modules
@@ -43,6 +45,7 @@ import { CrudViewComponent } from './components/crud-view/users-crud-view.compon
 import { RegistroServidorComponent } from './components/registro-servidor/registro-servidor.component';
 import { UsersTableComponent } from './components/users-crud-table/crud-table.component';
 import { WorkersCrudTableComponent } from './components/workers-crud-table/workers-crud-table.component';
+import { DialogContentExampleDialog } from './components/workers-crud-table/workers-crud-table.component';
 import { CategoriesCrudTableComponent } from './components/categories-crud-table/categories-crud-table.component';
 
 @NgModule({
@@ -60,7 +63,8 @@ import { CategoriesCrudTableComponent } from './components/categories-crud-table
     RegistroServidorComponent,
     UsersTableComponent,
     WorkersCrudTableComponent,
-    CategoriesCrudTableComponent
+    CategoriesCrudTableComponent,
+    DialogContentExampleDialog,
   ],
 
   imports: [
@@ -88,6 +92,7 @@ import { CategoriesCrudTableComponent } from './components/categories-crud-table
     MatToolbarModule,
     MatCardModule,
     MatTableModule,
+    MatDialogModule,
 
     //PWA Modules
     ServiceWorkerModule.register('ngsw-worker.js', {
@@ -106,6 +111,7 @@ import { CategoriesCrudTableComponent } from './components/categories-crud-table
     MatToolbarModule,
     MatCardModule,
     MatTableModule,
+    MatDialogModule,
   ],
 })
 export class AppModule { }
