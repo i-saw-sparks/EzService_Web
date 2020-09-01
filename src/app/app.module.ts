@@ -42,7 +42,6 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { ShortCutCardComponent } from './components/short-cut-card/short-cut-card.component';
 
 import { CrudViewComponent } from './components/crud-view/users-crud-view.component';
-import { RegistroServidorComponent } from './components/registro-servidor/registro-servidor.component';
 import { UsersTableComponent } from './components/users-crud-table/crud-table.component';
 import { WorkersCrudTableComponent } from './components/workers-crud-table/workers-crud-table.component';
 import { DialogContentExampleDialog } from './components/workers-crud-table/workers-crud-table.component';
@@ -60,7 +59,6 @@ import { CategoriesCrudTableComponent } from './components/categories-crud-table
     AdminPanelComponent,
     ShortCutCardComponent,
     CrudViewComponent,
-    RegistroServidorComponent,
     UsersTableComponent,
     WorkersCrudTableComponent,
     CategoriesCrudTableComponent,

@@ -44,12 +44,20 @@ export class WorkersCrudTableComponent {
   styleUrls: ['./dialog-content-dialog.css']
 })
 export class DialogContentExampleDialog {
-  itemRef: AngularFireList<any>;
+  users: AngularFireList<any>;
+  workers: AngularFireList<any>;
   dataSource: Observable<any>;
 
   constructor(private db: AngularFireDatabase, public dialog:MatDialog) {
-    this.itemRef = db.list('Usuarios');
-    this.dataSource = this.itemRef.valueChanges();
+    this.users = db.list('Usuarios');
+    this.workers = db.list('Servidores');
+    this.dataSource = this.users.valueChanges();
+  }
+
+  add(obj){
+    this.workers.push({ nombre: obj.nombre, apellidos: obj.apellidos, profesion: "undefined", userId:obj.id }).then(ref => {
+      this.workers.update(ref.key,{id:ref.key})
+    })
   }
 
 }

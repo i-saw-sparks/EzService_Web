@@ -5,7 +5,6 @@ import { LoginComponent } from './components/login-view/login.component';
 import { MainViewComponent } from './components/main-view/main-view.component';
 import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
 import { CrudViewComponent } from './components/crud-view/users-crud-view.component';
-import { RegistroServidorComponent } from './components/registro-servidor/registro-servidor.component';
 import { UsersTableComponent } from './components/users-crud-table/crud-table.component';
 import { WorkersCrudTableComponent } from './components/workers-crud-table/workers-crud-table.component'
 import { CategoriesCrudTableComponent } from './components/categories-crud-table/categories-crud-table.component';
