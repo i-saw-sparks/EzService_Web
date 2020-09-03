@@ -12,6 +12,12 @@
       <mat-icon matSuffix>vpn_key</mat-icon>
     </mat-form-field>
   </form>
-  <p></p>
+  <p *ngIf = '!loginFailed'></p>
+  
   <button mat-raised-button color="primary" (click)="login()">Login</button>
+  <mat-card *ngIf="loginFailed" class="login-failed">
+    <p>
+      {{errorMessage}}
+    </p>
+  </mat-card>
 </div>

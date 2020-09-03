@@ -16,7 +16,7 @@ export class AuthService {
     this.isLogged();
   }
 
-  
+
   public signup = (email, password, name, lastname) => {
     this.angularFireAuth
       .createUserWithEmailAndPassword(email, password)
@@ -34,23 +34,19 @@ export class AuthService {
         console.log(error);
       });
   };
-  
 
-  public login = (email, password) => {
-    this.angularFireAuth
+
+  public  async login (email, password) {
+    const result = await this.angularFireAuth
       .signInWithEmailAndPassword(email, password)
       .then((response) => {
-        console.log(response);
         this.router.navigate(['root/adminPanel']);
-        console.log('Login exitoso');
-      })
-      .catch((error) => {
-        console.log(error);
       });
-  };
+      return result;
+  };  
 
   public isLogged() {
-    return this.angularFireAuth.authState;  
+    return this.angularFireAuth.authState;
   }
 
   public logout() {
@@ -58,8 +54,8 @@ export class AuthService {
       this.router.navigate(['login']);
       console.log('Logout');
     })
-    .catch((error) => {
-      console.log(error);
-    });
+      .catch((error) => {
+        console.log(error);
+      });
   }
 }

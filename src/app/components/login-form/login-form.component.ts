@@ -19,6 +19,8 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 export class LoginFormComponent implements AfterViewChecked {
   loginParams: any = {};
   loading: boolean;
+  loginFailed: boolean = false;
+  errorMessage:string;
 
   constructor(public authService: AuthService) {
     this.loading = true;
@@ -26,9 +28,27 @@ export class LoginFormComponent implements AfterViewChecked {
 
   ngAfterViewChecked(): void {
     this.loading = false;
-  }
+  } 
 
   login() {
-    this.authService.login(this.loginParams.email, this.loginParams.password);
+    this.authService.login(this.loginParams.email, this.loginParams.password).catch((error) => {
+      this.loginFailed = true;
+      this.errorMessage = error.message;
+      console.log(error);
+      switch(error.code){
+        case 'auth/wrong-password':
+          this.errorMessage = "Wrong password, try again";
+          break;
+        case 'auth/user-not-found':
+          this.errorMessage = "User not found, try again";
+          break;
+        case 'auth/user-disabled':
+          this.errorMessage = "Your user is disabled, please contact an administrator";
+          break;
+        default:
+          this.errorMessage = error.message;
+          break;
+      }
+    });
   }
 }
