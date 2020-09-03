@@ -11,10 +11,10 @@
       <input matInput type="password" [(ngModel)]="loginParams.password" [ngModelOptions]="{ standalone: true }" />
       <mat-icon matSuffix>vpn_key</mat-icon>
     </mat-form-field>
+    <p></p>
+    <button type="submit" mat-raised-button color="primary" (click)="login()">Login</button>
   </form>
-  <p *ngIf = '!loginFailed'></p>
-  
-  <button mat-raised-button color="primary" (click)="login()">Login</button>
+
   <mat-card *ngIf="loginFailed" class="login-failed">
     <p>
       {{errorMessage}}
