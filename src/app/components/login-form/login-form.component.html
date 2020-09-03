@@ -15,9 +15,10 @@
     <button type="submit" mat-raised-button color="primary" (click)="login()">Login</button>
   </form>
 
-  <mat-card *ngIf="loginFailed" class="login-failed">
-    <p>
-      {{errorMessage}}
-    </p>
-  </mat-card>
+    <mat-card *ngIf="loginFailed" [@inOutAnimation]  class="login-failed">
+      <p>
+        {{errorMessage}}
+      </p>
+    </mat-card>
+
 </div>
