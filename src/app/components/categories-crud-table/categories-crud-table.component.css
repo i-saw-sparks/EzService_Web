@@ -33,3 +33,9 @@
     max-width: 50px;
     max-height: 50px;
 }
+
+.add{
+    margin-top: 5px;
+    background-color: olivedrab;
+    color: ghostwhite;
+}

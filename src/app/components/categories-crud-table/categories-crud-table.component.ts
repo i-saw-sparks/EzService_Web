@@ -27,4 +27,11 @@ export class CategoriesCrudTableComponent {
       this.itemRef.remove(obj.id); 
     }
   }
+
+  add(){
+    this.itemRef.push({Nombre:'default', Imagen: 'https://firebasestorage.googleapis.com/v0/b/servicios-4df28.appspot.com/o/defaults%2Fbookmark_border_black_192x192.png?alt=media&token=a9600608-f9e0-4e1e-ac57-2669ea71ec63'}).then(ref =>{
+      this.itemRef.update(ref.key,{id:ref.key});
+    }
+    );
+  }
 }
