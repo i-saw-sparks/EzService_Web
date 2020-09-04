@@ -1,0 +1,14 @@
+<div mat-dialog-content class="dialog" cdkFocusInitial>
+    <mat-form-field appearance="standard" class="input">
+        <input matInput [(ngModel)]="formData"/>
+    </mat-form-field>
+</div>
+<div class="actionBar">
+    <button mat-raised-button color="primary" class="btn" (click)="save()">
+        <mat-icon color="accent">check</mat-icon>
+    </button>
+
+    <button mat-raised-button mat-dialog-close class="close">
+        <mat-icon>cancel</mat-icon>
+    </button>
+</div>

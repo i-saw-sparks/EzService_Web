@@ -1,0 +1,25 @@
+.btn{
+    margin-right: 8px;
+}
+
+
+.close {
+    background-color: tomato;
+    color: ghostwhite;
+}
+
+.input {
+    width: 100% ;
+}
+
+.actionBar{
+    margin: auto;
+    display: block;
+    position: relative;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.dialog{
+    width: 50vw;
+}
